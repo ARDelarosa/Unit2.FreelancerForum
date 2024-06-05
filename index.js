@@ -23,6 +23,8 @@ function render () {
         return element;
     });
     people.replaceChildren(...nameElements);
+
+    updateAveragePrice();
 }
 
 function addFreelancer() {
@@ -32,4 +34,12 @@ function addFreelancer() {
     if (freelancers.length >= maxLancers) {
         clearInterval(addFreelancerIntervalId);
     }
+}
+
+function updateAveragePrice() {
+    const total = freelancers.reduce((sum, freelancer) => sum + freelancer.price, 0);
+    const average = total / freelancers.length;
+    const averagePriceElement = document.querySelector("#average-price");
+    averagePriceElement.textContent = `$${average.toFixed(2)}`;
+
 }
