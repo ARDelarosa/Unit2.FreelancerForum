@@ -1,0 +1,31 @@
+body {
+    border: solid, 2px, black;
+}
+
+div {
+    display: flex;
+    margin-left: 40%;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 1rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+.Sue {
+    background-color: white;
+}
